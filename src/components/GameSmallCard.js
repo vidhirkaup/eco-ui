@@ -1,9 +1,9 @@
 import { React } from 'react';
 
-export const GameSmallCard = () => {
+export const GameSmallCard = ({game}) => {
   return (
     <div className="GameSmallCard">
-        <h3>Latest Game</h3>
+        <h4>{game.team1} v/s {game.team2}</h4>
     </div>
   );
 }
