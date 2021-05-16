@@ -5,7 +5,7 @@ import { GameSmallCard } from '../components/GameSmallCard';
 
 export const TeamPage = () => {
 
-  const[team, setTeam] = useState({});
+  const[team, setTeam] = useState([]);
 
   const { teamName } = useParams();
 

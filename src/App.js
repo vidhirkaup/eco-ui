@@ -7,14 +7,19 @@ function App() {
   return (
     <div className="App">
       <Router>
+
         <Switch>
+          
           <Route path="/teams/:teamName/games/:year">
             <GamePage />
           </Route>
+          
           <Route path="/teams/:teamName">
             <TeamPage />
           </Route>
+        
         </Switch>
+      
       </Router>
     </div>
   );
