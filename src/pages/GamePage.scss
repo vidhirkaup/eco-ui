@@ -1,0 +1,12 @@
+.GamePage {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    row-gap: 10px;
+    column-gap: 20px;
+    padding: 10px;
+    
+    .games-section {
+        display: grid;
+        row-gap: 5px;    
+    }
+}

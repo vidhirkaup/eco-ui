@@ -11,8 +11,8 @@ export const GameDetailCard = ({teamName, game}) => {
   const isMatchWinner = (teamName === game.winner);
   
   return (
-    <div className= { isMatchWinner ? 'GameDetailCard won-card' : 'GameDetailCard lost-card' }>
-        <div>
+      <div className= { isMatchWinner ? 'GameDetailCard won-card' : 'GameDetailCard lost-card' }>
+        <div >
           <span class="vs">v/s</span> 
           <h1><Link to={linkToOtherTeam}>{otherTeam}</Link></h1>
           
@@ -20,10 +20,10 @@ export const GameDetailCard = ({teamName, game}) => {
           
           <h3 className="game-venue">at {game.venue}</h3>
           
-          <h3 className="game-result">{game.winner} won by {game.resultMargin} {game.result} </h3>
+          <p className="game-result">{game.winner} won by {game.resultMargin} {game.result} </p>
         </div>
 
-        <div className="game-detail">
+        <div className='game-detail'>
           <h3>First Innings</h3>
           <p>{game.team1}</p>
 
@@ -37,6 +37,6 @@ export const GameDetailCard = ({teamName, game}) => {
           <p>{game.umpire1}, {game.umpire2}</p>
         </div>
 
-    </div>
+      </div>
   );
 }

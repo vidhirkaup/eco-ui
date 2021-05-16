@@ -1,3 +1,4 @@
+import './GamePage.scss'
 import { React, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { GameDetailCard } from '../components/GameDetailCard';
@@ -17,16 +18,20 @@ export const GamePage = () => {
       }
       fetchGames();
     },
-    []
+    [teamName, year]
   )
 
   return (
     <div className="GamePage">
-        <h1>Game Page</h1>
+        <div className="year-selector-section">
+          <h3>Choose year</h3>
+        </div>
 
-        {
-          games.map(game => <GameDetailCard teamName={teamName} game={game}/>)
-        }
+        <div className="games-section">
+          <h3>Games Played</h3>
+
+          { games.map(game => <GameDetailCard teamName={teamName} game={game}/>)}
+        </div>
     
     </div>
   );

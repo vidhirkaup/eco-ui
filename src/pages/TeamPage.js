@@ -39,7 +39,7 @@ export const TeamPage = () => {
           />
         </div>
         
-        <div className="match-detail-section">
+        <div className="game-detail-section">
           <h3>Latest Game</h3>
           <GameDetailCard teamName={team.teamName} game={team.games[0]}/>
         </div>
