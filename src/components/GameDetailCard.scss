@@ -1,0 +1,20 @@
+.GameDetailCard {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+
+    .game-date, .game-venue, .game-result {
+        margin-top: 10px;
+    }
+
+    .game-detail {
+        text-align: right;
+        & > p {
+            margin-bottom: 20px;
+        }
+    }
+
+}
+
