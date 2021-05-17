@@ -2,6 +2,7 @@ import './GamePage.scss'
 import { React, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { GameDetailCard } from '../components/GameDetailCard';
+import { YearSelector } from '../components/YearSelector';
 
 export const GamePage = () => {
 
@@ -24,13 +25,14 @@ export const GamePage = () => {
   return (
     <div className="GamePage">
         <div className="year-selector-section">
-          <h3>Choose year</h3>
+          <h2>Select year</h2>
+          <YearSelector teamName={teamName} />
         </div>
 
         <div className="games-section">
-          <h3>Games Played</h3>
+          <h2>{teamName}</h2>
 
-          { games.map(game => <GameDetailCard teamName={teamName} game={game}/>)}
+          { games.map(game => <GameDetailCard teamName={teamName} game={game}/>) }
         </div>
     
     </div>
