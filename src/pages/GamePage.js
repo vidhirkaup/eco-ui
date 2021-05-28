@@ -3,6 +3,7 @@ import { React, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { GameDetailCard } from '../components/GameDetailCard';
 import { YearSelector } from '../components/YearSelector';
+import { Home } from '../components/Home';
 
 export const GamePage = () => {
 
@@ -27,6 +28,8 @@ export const GamePage = () => {
         <div className="year-selector-section">
           <h2>Select year</h2>
           <YearSelector teamName={teamName} />
+          <hr/>
+          <Home />
         </div>
 
         <div className="games-section">

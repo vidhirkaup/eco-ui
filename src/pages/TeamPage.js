@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import { PieChart } from 'react-minimal-pie-chart';
 import { GameDetailCard } from '../components/GameDetailCard';
 import { GameSmallCard } from '../components/GameSmallCard';
+import { Home } from '../components/Home';
 
 export const TeamPage = () => {
 
@@ -52,6 +53,8 @@ export const TeamPage = () => {
         
         <div className="more-link">
           <Link to={`/teams/${team.teamName}/games/2020`}>More {'>'}</Link>
+          <hr></hr>
+          <Home/>
         </div>
 
     </div>
