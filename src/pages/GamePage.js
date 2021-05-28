@@ -30,7 +30,7 @@ export const GamePage = () => {
         </div>
 
         <div className="games-section">
-          <h2>{teamName}</h2>
+          <h3>{teamName} games in {year}</h3>
 
           { games.map(game => <GameDetailCard teamName={teamName} game={game}/>) }
         </div>

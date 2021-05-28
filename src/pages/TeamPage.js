@@ -1,13 +1,13 @@
 import './TeamPage.scss'
 import { React, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { PieChart } from 'react-minimal-pie-chart';
 import { GameDetailCard } from '../components/GameDetailCard';
 import { GameSmallCard } from '../components/GameSmallCard';
 
 export const TeamPage = () => {
 
-  const[team, setTeam] = useState([]);
+  const[team, setTeam] = useState({games: []});
 
   const { teamName } = useParams();
 
@@ -22,6 +22,10 @@ export const TeamPage = () => {
     }, 
     [teamName]
   )
+
+  if(!team || !team.teamName) {
+    return <h1>Team not found</h1>
+  }
 
   return (
     <div className="TeamPage">
@@ -47,7 +51,7 @@ export const TeamPage = () => {
         {team.games.slice(1).map(game => <GameSmallCard teamName={team.teamName} game={game}/>)}
         
         <div className="more-link">
-          <a href="#"> More > </a>
+          <Link to={`/teams/${team.teamName}/games/2020`}>More ></Link>
         </div>
 
     </div>
