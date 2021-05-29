@@ -49,7 +49,7 @@ export const TeamPage = () => {
           <GameDetailCard teamName={team.teamName} game={team.games[0]}/>
         </div>
         
-        {team.games.slice(1).map(game => <GameSmallCard teamName={team.teamName} game={game}/>)}
+        {team.games.slice(1).map(game => <GameSmallCard key={game.id} teamName={team.teamName} game={game}/>)}
         
         <div className="more-link">
           <Link to={`/teams/${team.teamName}/games/2020`}>More {'>'}</Link>
