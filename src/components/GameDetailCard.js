@@ -13,7 +13,7 @@ export const GameDetailCard = ({teamName, game}) => {
   return (
       <div className= { isMatchWinner ? 'GameDetailCard won-card' : 'GameDetailCard lost-card' }>
         <div >
-          <span class="vs">v/s</span> 
+          <span className="vs">v/s</span> 
           <h1><Link to={linkToOtherTeam}>{otherTeam}</Link></h1>
           
           <h2 className="game-date">{game.date}</h2>
